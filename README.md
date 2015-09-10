@@ -20,6 +20,7 @@
 
 ## absCenter :
 *Centering item by translate CSS propriety*
+
 **Think about putting the parent in relative position and item affected in absolute position**
 * @or : defines centering orientation
     - vertical
@@ -31,5 +32,6 @@
 * @or : same than absCenter
 * @top : if @or is 'vertical' or 'both', set negative margin-top
 * @left : if @or is 'horizontal' or 'both', set negative margin-left
+
 **set 0 to @top if @or is 'horizontal'**
 **set 0 to @left if @or is 'vertical'**
