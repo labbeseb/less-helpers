@@ -1,0 +1,75 @@
+.clearfix(){
+
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+    border-collapse: collapse;
+  }
+}
+
+.hyphenText(){
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.createTrinangle(@or, @w, @h, @color){
+  width: 0;
+  height: 0;
+  border-style: solid;
+
+  & when (@or = left) {
+    border-width: (@h/2) @w (@h/2) 0;
+    border-color: transparent @color transparent transparent;
+  }
+  & when (@or = right) {
+    border-width: (@h/2) 0 (@h/2) @w;
+    border-color: transparent transparent transparent @color;
+  }
+  & when (@or = top) {
+    border-width: 0 (@w/2) @h (@w/2);
+    border-color: transparent transparent @color transparent;
+  }
+  & when (@or = bottom) {
+    border-width: @h (@w/2) 0 (@w/2);
+    border-color: @color transparent transparent transparent;
+  }
+}
+
+.absCenter(@or){
+
+  & when (@or = vertical) {
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  & when (@or = horizontal) {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+  & when (@or = both) {
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+  }
+}
+
+.corrIeCenter(@or, @top, @left){
+
+  & when (@or = vertical) {
+    margin-top: @top;
+  }
+  & when (@or = horizontal) {
+    margin-left: @left;
+  }
+  & when (@or = both) {
+    margin-top: @top;
+    margin-left: @left;
+  }
+}
