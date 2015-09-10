@@ -34,4 +34,5 @@
 * @left : if @or is 'horizontal' or 'both', set negative margin-left
 
 **set 0 to @top if @or is 'horizontal'**
+
 **set 0 to @left if @or is 'vertical'**
