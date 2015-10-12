@@ -36,3 +36,7 @@
 **set 0 to @top if @or is 'horizontal'**
 
 **set 0 to @left if @or is 'vertical'**
+
+## loopByOneAddBefore :
+*A loop that add a pseudo-element before to the element @n at the @i*
+* @i must be greater than @n
