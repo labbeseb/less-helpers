@@ -27,7 +27,7 @@
     - horizontal
     - both
 
-## compIeCenter :
+## absCenterCompat :
 *Fix the absCenter no-compatibility*
 * @or : same than absCenter
 * @top : if @or is 'vertical' or 'both', set negative margin-top
