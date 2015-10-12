@@ -60,7 +60,7 @@
   }
 }
 
-.corrIeCenter(@or, @top, @left){
+.compIeCenter(@or, @top, @left){
 
   & when (@or = vertical) {
     margin-top: @top;
@@ -72,4 +72,15 @@
     margin-top: @top;
     margin-left: @left;
   }
+}
+
+.loopByOneAddBefore(@i, @n) when (@i > @n){
+  li:nth-child(@{i}){
+
+    &:before{
+      content: '';
+    }
+  }
+
+  .boucleTirets(@i - 1);
 }
