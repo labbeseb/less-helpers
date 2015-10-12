@@ -7,7 +7,7 @@
 ## hyphenText :
 *Cuting the text and adds "..." after this if it's longer than its container*
 
-## createTrinangle :
+## createTriangle :
 *Created a triangle according to its orientation and size*
 * @or : determines the orientation of triangle
     - top
@@ -27,7 +27,7 @@
     - horizontal
     - both
 
-## corrIeCenter :
+## compIeCenter :
 *Fix the absCenter no-compatibility*
 * @or : same than absCenter
 * @top : if @or is 'vertical' or 'both', set negative margin-top
