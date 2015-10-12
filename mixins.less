@@ -84,3 +84,25 @@
 
   .loopByOneAddBefore((@i - 1), @n);
 }
+
+.radial-gradient(@startColor, @endColor) {
+  background: @startColor;
+  background: -moz-radial-gradient(center, ellipse, @startColor 0%, @endColor 100%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, @startColor), color-stop(100%, @endColor));
+  background: -webkit-radial-gradient(center, ellipse, @startColor 0%, @endColor 100%);
+  background: -o-radial-gradient(center, ellipse, @startColor 0%, @endColor 100%);
+  background: -ms-radial-gradient(center, ellipse, @startColor 0%, @endColor 100%);
+  background: radial-gradient(ellipse at center, @startColor 0%, @endColor 100%);
+}
+
+// == Transform
+.rotate(@deg){
+  -webkit-transform: rotate(@deg);
+  -ms-transform: rotate(@deg);
+  transform: rotate(@deg);
+}
+.scale(@ratio){
+  -webkit-transform: scale(@ratio);
+  -ms-transform: scale(@ratio);
+  transform: scale(@ratio);
+}
